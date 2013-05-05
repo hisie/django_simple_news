@@ -15,6 +15,9 @@ INSTALLED_APPS = (
     ...
 )
 
+in urls.py
+    url(r'^seo_name_for_news/', include('new.urls')),
+
 Configure CKeditor
 
 https://github.com/shaunsephton/django-ckeditor#installation
@@ -39,4 +42,22 @@ CKEDITOR_CONFIGS = {
     },
 }
 
-urls.py    
+Configure easy-thumbnails for each template
+
+# easy-thumbnails config
+
+https://pypi.python.org/pypi/easy-thumbnails/1.2
+
+THUMBNAIL_ALIASES = {
+    '': {
+        'new_detail': {'size': (50, 50), 'crop': True},
+        'new_list': {'size': (152, 152), 'crop': True},
+        'new_index': {'size': (960, 1760), 'crop': False, 'upscale': True},
+    },
+}
+
+You also can overwrite templates:
+
+/templates/new/new_detail.html for new detail
+/templates/new/news_index.html for a list of news
+/templates/new/news_list.html to get a list of news without a context to get include in custom templates.

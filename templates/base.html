@@ -1,0 +1,46 @@
+{% load url from future %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>{% block title%}{% endblock title%} Simple News Example</title>
+	<meta name="description" content="{% block description%}{% endblock description%}">
+	<meta name="keywords" content="titirimundi, {% block keywords%}{% endblock keywords%}">
+	{{form.media}}
+	{% block css_header%}
+	{% endblock%}
+	{% block js_header%}
+	{% endblock%}
+</head>
+
+<body>
+	<header class="anchura">
+		<div>
+			<h1 class="logo">
+				<a href="/">
+					Simple News Example
+				</a>
+			</h1>
+			<nav>
+				<a href="/">Inicio</a>
+				<a href="/noticias/">Noticias</a>
+			</nav>
+		</div>
+     </header>
+	<section class="anchura">
+	{% block base%}
+	{% endblock%}
+	</section>
+	
+	<address class="footer anchura clearfix">
+		<span>Simple News Example &copy; 2013 - {% now "Y" %}</span>
+	</address>
+{% block js_footer%}
+{% endblock%}
+</body>
+</html>
