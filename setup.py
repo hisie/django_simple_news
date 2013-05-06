@@ -3,9 +3,9 @@ import os.path
 from setuptools import setup
 
 setup(
-    name='django-simple-news',
+    name='django-zms-news',
     version='0.1',
-    packages = ['simple-news'],
+    packages = ['news'],
     include_package_data = True,
     license = 'Apache License, Version 2.0', 
     description='Django news with CKEditor integrated.',

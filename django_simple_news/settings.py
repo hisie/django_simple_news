@@ -132,7 +132,7 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
     'easy_thumbnails',
     'ckeditor',
-    'new',
+    'news',
     'example',
 )
 
